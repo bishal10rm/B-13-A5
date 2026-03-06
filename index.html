@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Issues Tracker</title>
+    <title> Github Issues Tracker login</title>
      <style>
         *{
           font-family: "Geist", sans-serif;   
@@ -29,20 +29,20 @@
         </div>
 
         <div>
-            <fieldset class="fieldset  border-base-300 mx-auto rounded-box w-xs border p-4">
+            <fieldset class="fieldset border-base-300 mx-auto rounded-box w-xs border p-4">
                 <legend class="fieldset-legend"></legend>
               
                 <label class="label">Username</label>
-                <input type="email" class="input" placeholder="Enter Username" />
+                <input type="text" id="input-user" class="input" placeholder="Enter Username" />
               
                 <label class="label">Password</label>
-                <input type="password" class="input" placeholder="Enter Password" />
+                <input type="password" id="input-password" class="input" placeholder="Enter Password" />
               
-                <button class="btn btn-neutral mt-4">Sign In</button>
+                <button id="btn-signin"class="btn btn-neutral mt-4">Sign In</button>
               </fieldset>
         </div>
     </section>
     
-    
+    <script src="login.js"></script>
 </body>
 </html>
