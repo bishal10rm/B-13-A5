@@ -17,7 +17,32 @@
        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+ <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <!-- login interface -->
+     <section>
+        <div class="logo w-[200px] mx-44 pt-32">
+            <img src="assets/github-logo.png">
+        </div>
+        <div class="text-center">
+            <h2 class="text-[24px] font-semibold">GitHub Issues Tracker</h2>
+            <p class="text-[16px] text-#64748B">Sign in to manage your issues</p>
+        </div>
+
+        <div>
+            <fieldset class="fieldset  border-base-300 mx-auto rounded-box w-xs border p-4">
+                <legend class="fieldset-legend"></legend>
+              
+                <label class="label">Username</label>
+                <input type="email" class="input" placeholder="Enter Username" />
+              
+                <label class="label">Password</label>
+                <input type="password" class="input" placeholder="Enter Password" />
+              
+                <button class="btn btn-neutral mt-4">Sign In</button>
+              </fieldset>
+        </div>
+    </section>
+    
     
 </body>
 </html>
