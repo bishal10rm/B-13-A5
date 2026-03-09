@@ -34,9 +34,9 @@
 
     <section>
      <div class="tabs tabs-box mt-5">
-      <input type="radio" name="my_tabs_6" class="tab" aria-label="All" checked="checked" />
-      <input type="radio" name="my_tabs_6" class="tab" aria-label="Opend"  />
-      <input type="radio" name="my_tabs_6" class="tab" aria-label="Closed" />  
+      <input type="radio" name="my_tabs_6" id="allTab" class="tab" aria-label="All" checked="checked" />
+      <input type="radio" name="my_tabs_6" id="openTab" class="tab" aria-label="Opend"  />
+      <input type="radio" name="my_tabs_6" id="closeTab" class="tab" aria-label="Closed" />  
      </div>
     </section><br>
 
@@ -46,8 +46,8 @@
                 <img class="w-[50px] "src="assets/Aperture.png">
             </div>
 
-            <div class="flex flex-col pr-145">
-                <h3 class="text-[20px] font-semibold">50 Issues</h3>
+            <div class="flex flex-col pr-207">
+                <h3 id="issueCount"class="text-[20px] font-semibold">50 Issues</h3>
                 <p class="">Track and manage your project issues</p>
             </div>
            
@@ -64,6 +64,38 @@
            
         </div>
           
+    </section>
+
+    <section>
+        <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="issues_modal.showModal()">open modal</button>
+       <dialog id="issues_modal" class="modal">
+        <div class="modal-box">
+          <h3 id="issueTitle" class="text-lg font-bold">Fix broken image uploads</h3>
+          <div id="issueStatus" class="badge badge-success">Opened</div>
+          <p id="issueAuthor">Opened by Fahim Ahmed</p>
+          <p id="issueDate">22/02/2026</p>
+          <div class="badge badge-error">BUG</div>
+          <div class="badge badge-warning">HELP WANTED</div>
+           <p id="issueDescription" class="py-4">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+            <div>
+                <div>
+                    <h4>Assignee:</h4>
+                    <h4 class="font-bold">Fahim Ahmed</h4>
+                    <p id="issuePriority">Priority:</p>
+                    <div class="badge badge-secondary ">HIGH</div>
+                </div>
+            </div>
+
+           
+           <div class="modal-action">
+             <form method="dialog">
+         <!-- if there is a button in form, it will close the modal -->
+              <button class="btn bg-purple-800 text-white">Close</button>
+               </form>
+             </div>
+        </div>
+      </dialog>
     </section>
     
     <script src="script.js"></script>
