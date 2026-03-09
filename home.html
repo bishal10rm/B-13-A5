@@ -17,9 +17,12 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
+
 <body class="container mx-auto">
+     <!-- navbar section  -->
     <nav>
-        <div class=" bg-base-200 flex justify-between p-5">
+        <div class=" bg-base-200 flex flex-col md:flex-row md:justify-between md:items-center gap-4 p-5">
             <div logo class="flex  items-center">
                 <img  class="w-[36px]" src="assets/github-logo.png">
                 <h2 class="text-[24px]  font-semibold ">GitHub Issues Tracker</h2>
@@ -32,6 +35,7 @@
         </div>
     </nav>
 
+    <!-- tab button section  -->
     <section>
      <div class="tabs tabs-box mt-5">
       <input type="radio" name="my_tabs_6" id="allTab" class="tab" aria-label="All" checked="checked" />
@@ -46,7 +50,7 @@
                 <img class="w-[50px] "src="assets/Aperture.png">
             </div>
 
-            <div class="flex flex-col pr-207">
+            <div class="flex flex-col flex-1">
                 <h3 id="issueCount"class="text-[20px] font-semibold">50 Issues</h3>
                 <p class="">Track and manage your project issues</p>
             </div>
@@ -58,17 +62,17 @@
           
         </div>
     </section>
-     
+      <!-- Issue cards section  -->
     <section>
         <div id="cardsContainer" class="card bg-white container max-auto grid grid-cols-1 sm:grid-cols-4 gap-4">
-           
+            
         </div>
           
     </section>
 
     <section>
         <!-- Open the modal using ID.showModal() method -->
-      <button class="btn" onclick="issues_modal.showModal()">open modal</button>
+      <!-- <button class="btn" onclick="issues_modal.showModal()">open modal</button> -->
        <dialog id="issues_modal" class="modal">
         <div class="modal-box">
           <h3 id="issueTitle" class="text-lg font-bold">Fix broken image uploads</h3>
@@ -80,8 +84,8 @@
            <p id="issueDescription" class="py-4">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
             <div>
                 <div>
-                    <h4>Assignee:</h4>
-                    <h4 class="font-bold">Fahim Ahmed</h4>
+                    <h4 id="issueAssignee">Assignee:</h4>
+                    <h4 id="issueName"class="font-bold">Fahim Ahmed</h4>
                     <p id="issuePriority">Priority:</p>
                     <div class="badge badge-secondary ">HIGH</div>
                 </div>
@@ -91,12 +95,18 @@
            <div class="modal-action">
              <form method="dialog">
          <!-- if there is a button in form, it will close the modal -->
-              <button class="btn bg-purple-800 text-white">Close</button>
+              <button class="btn bg-purple-800 text-white" onclick="document.getElementById('issues_modal').close()">Close</button>
+
                </form>
              </div>
         </div>
       </dialog>
     </section>
+    <div id="loadingSpinner">
+        <span class="loading loading-spinner loading-md"></span>
+    </div>
+    
+    
     
     <script src="script.js"></script>
 </body>
